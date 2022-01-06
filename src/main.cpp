@@ -3,8 +3,8 @@
 
 #define NUM_OF_TESTS                500
 
-#define RX_THRESHOLD_HIGH           1900
-#define RX_THRESHOLD_LOW            1100
+#define RX_THRESHOLD_HIGH           1600
+#define RX_THRESHOLD_LOW            400
 
 #define TRIGGER_WAIT_RAND_MIN_MS    200000
 #define TRIGGER_WAIR_RAND_MAX_MS    350000
@@ -312,7 +312,7 @@ void loop()
     }
   }
 
-  // Handle serial to receiver
+  // Handle UART data from the receiver
 #if defined(USE_CRSF)
   crsf.handleUARTin();
 #elif defined(USE_GHST)
